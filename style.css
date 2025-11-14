@@ -19,7 +19,7 @@ html {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
+    background-color:#f7f7f7;
     backdrop-filter: blur(30px);
     border-bottom: 1px solid var(--border);
 }
@@ -27,17 +27,25 @@ html {
 .nav-container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 0.7rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+.name{
+    display: flex;
+}
+.name img{
+    width: 80px;
+    height: 80px;
 
+}
 .logo {
   font-family: fantasy;
   font-weight: 900;
   font-size: 2.5rem;
-  margin-top: 10px;
+  margin-top: 25px;
+  margin-left: 5px;
   color: hsl(173, 58%, 39%);
   letter-spacing: 2px;
   text-align: center;
@@ -52,10 +60,11 @@ html {
 .nav-links a {
     text-decoration: none;
     color: rgba(35, 41, 41, 1);
-    transition: color 0.3s;
+    transition: 0.3s ease;
 }
 .nav-links .toA:hover {
-    color: rgb(13, 84, 75);
+    color: rgb(0, 0, 0);
+    font-weight: 400;
 }
 .btn {
     padding: 0.75rem 1.5rem;
@@ -172,7 +181,8 @@ html {
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.85);
+    background: linear-gradient(135deg, rgb(199, 227, 225) 0%, rgb(176, 231, 227) 100%);
+    backdrop-filter: blur(40px);
     border-radius: 0.75rem;
     border: 1px solid var(--border);
     transition: all 0.3s;
@@ -343,14 +353,14 @@ html {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 .featured-visual {
-    background: linear-gradient(135deg, rgb(180, 255, 236) 0%, rgb(60, 166, 152) 100%);
+    /* background: linear-gradient(135deg, rgb(49, 154, 127) 0%, rgb(60, 166, 152) 100%); */
     border-radius: 1.5rem;
     padding: 3rem;
     box-shadow: 0 4px 20px -2px rgba(23, 122, 106, 0.1);
 }
 
 .visual-card {
-    background: white;
+    background: linear-gradient(135deg, rgb(150, 223, 216) 0%, rgb(104, 201, 195) 100%);
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
@@ -358,10 +368,38 @@ html {
 }
 
 .visual-card .emoji {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 1rem;
 }
-
+.visual-card p{
+    margin: 10px ;
+}
+.mini-features {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+.mini-item {
+    width: auto;
+    height: 70px;
+    background: rgba(255,255,255,0.25);
+    padding: 10px 12px;
+    border-radius: 80px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.30s ease;
+}
+.mini-item:hover{
+    transform: translateY(-2px);
+}
 .steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -379,7 +417,7 @@ html {
 .step-icon {
     width: 5rem;
     height: 5rem;
-    background: var(--primary);
+    background: rgb(223, 242, 240);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -392,7 +430,7 @@ html {
 
 .step-number {
     position: absolute;
-    top: -0.5rem;
+    top: -0.8rem;
     right: -0.5rem;
     width: 2rem;
     height: 2rem;
@@ -422,7 +460,7 @@ html {
 }
 
 .review-card {
-    background: white;
+    background: linear-gradient(135deg, rgb(199, 227, 225) 0%, rgb(176, 231, 227) 100%);
     border-radius: 0.75rem;
     border: 1px solid var(--border);
     padding: 1.5rem;
@@ -433,12 +471,11 @@ html {
     gap: 1rem;
     margin-bottom: 1rem;
 }
-
 .avatar {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit:cover;
 }
 
 .reviewer-info h4 {
@@ -463,8 +500,8 @@ html {
 }
 
 .footer {
-    background: var(--muted);
-    border-top: 1px solid var(--border);
+   background: rgba(245, 245, 245, 1);
+   border-top: 1px solid rgba(229, 231, 235, 1);
     padding: 3rem 2rem;
 }
 
@@ -490,21 +527,22 @@ html {
 }
 
 .footer-links a {
-    color: var(--muted-foreground);
+    color: black;
     text-decoration: none;
     font-size: 0.875rem;
     transition: color 0.3s;
 }
 
 .footer-links a:hover {
-    color: var(--primary);
+    font-size:0.895rem;
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid var(--border);
-    color: var(--muted-foreground);
+    border-top: 1px solid rgb(148, 148, 151);
+    color: black;
+    font-weight: 500;
     font-size: 0.875rem;
 }
 
